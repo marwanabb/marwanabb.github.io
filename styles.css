@@ -753,3 +753,24 @@ ul {
         padding: 16px;
     }
 }
+
+/* Custom icons for academic platforms */
+.custom-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-links .custom-icon {
+    font-size: 1.5rem;
+}
+
+.contact-icon.custom-icon svg {
+    width: 32px;
+    height: 32px;
+}
