@@ -121,6 +121,23 @@ ul {
     background-color: var(--bg-alt-2);
 }
 
+/* Academic Icons Styles */
+.ai {
+    color: var(--primary-color);
+}
+
+.ai-lg {
+    font-size: 1.5em;
+}
+
+.contact-icon .ai {
+    font-size: 1.75rem;
+}
+
+.all-publications-link .ai {
+    margin-left: 8px;
+}
+
 /* Header Styles */
 .header {
     position: fixed;
@@ -752,25 +769,4 @@ ul {
     .card {
         padding: 16px;
     }
-}
-
-/* Custom icons for academic platforms */
-.custom-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.custom-icon svg {
-    width: 24px;
-    height: 24px;
-}
-
-.social-links .custom-icon {
-    font-size: 1.5rem;
-}
-
-.contact-icon.custom-icon svg {
-    width: 32px;
-    height: 32px;
 }
