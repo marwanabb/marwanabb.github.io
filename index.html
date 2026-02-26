@@ -14,14 +14,13 @@
 </head>
 <body>
 
-    <!-- Ambient background -->
     <div class="bg-grid"></div>
     <div class="bg-glow bg-glow--1"></div>
     <div class="bg-glow bg-glow--2"></div>
 
     <div class="layout">
 
-        <!-- ===== LEFT PANEL — Green Glass Identity Column ===== -->
+        <!-- ===== LEFT PANEL ===== -->
         <aside class="panel" id="panel">
             <div class="panel__inner">
 
@@ -35,12 +34,24 @@
 
                 <div class="panel__divider"></div>
 
+                <div class="panel__links">
+                    <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                    <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>
+                    <a href="https://github.com/marwanabb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:marwan.abbas@univ-brest.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <div class="panel__divider"></div>
+
                 <ul class="panel__tags">
+                    <li>Medical Image Analysis</li>
+                    <li>AI</li>
                     <li>Deep Learning</li>
-                    <li>Medical Imaging</li>
                     <li>Computer Vision</li>
-                    <li>Oncology AI</li>
-                    <li>Computational Pathology</li>
+                    <li>Oncology</li>
+                    <li>Pathology</li>
+                    <li>Radiology</li>
                 </ul>
 
                 <div class="panel__divider"></div>
@@ -49,16 +60,8 @@
                     <a href="#about" class="panel__nav-link" data-section="about">About</a>
                     <a href="#research" class="panel__nav-link" data-section="research">Research</a>
                     <a href="#publications" class="panel__nav-link" data-section="publications">Publications</a>
-                    <a href="#contact" class="panel__nav-link" data-section="contact">Contact</a>
                 </nav>
 
-                <div class="panel__links">
-                    <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-                    <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>
-                    <a href="https://github.com/marwanabb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:marwan.abbas@univ-brest.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </aside>
 
@@ -76,7 +79,6 @@
         <!-- ===== MAIN CONTENT ===== -->
         <main class="content" id="content">
 
-            <!-- ABOUT -->
             <section id="about" class="section">
                 <span class="section__label">01 — About</span>
                 <h2 class="section__title">Building AI systems<br>that advance cancer care.</h2>
@@ -133,7 +135,6 @@
                 </div>
             </section>
 
-            <!-- RESEARCH -->
             <section id="research" class="section">
                 <span class="section__label">02 — Research</span>
                 <h2 class="section__title">Focus areas</h2>
@@ -160,10 +161,30 @@
                         <p class="card__text">Cross-dimensional knowledge transfer and multi-modal fusion for robust model deployment across institutions and imaging protocols.</p>
                     </div>
                 </div>
+
+                <div class="projects">
+                    <h3 class="projects__heading">Clinical Trials</h3>
+                    <div class="projects__grid">
+                        <div class="project">
+                            <span class="project__badge">FFCD</span>
+                            <h4>PRODIGE 9 & 20</h4>
+                            <p>AI imaging criteria for treatment response. Organ atrophy as predictive factor.</p>
+                        </div>
+                        <div class="project">
+                            <span class="project__badge">T2004</span>
+                            <h4>Liver Metastases Monitoring</h4>
+                            <p>Automatic liver and lesion segmentation for metastatic colorectal cancer patients.</p>
+                        </div>
+                        <div class="project">
+                            <span class="project__badge">T2301</span>
+                            <h4>BEVATROPHY</h4>
+                            <p>Multi-organ segmentation models for body composition in clinical trials.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- PUBLICATIONS -->
-            <section id="publications" class="section">
+            <section id="publications" class="section section--last">
                 <span class="section__label">03 — Publications</span>
                 <h2 class="section__title">Selected work</h2>
 
@@ -220,34 +241,6 @@
                     All publications on Google Scholar
                     <i class="fas fa-arrow-right"></i>
                 </a>
-            </section>
-
-            <!-- CONTACT -->
-            <section id="contact" class="section section--last">
-                <span class="section__label">04 — Contact</span>
-                <h2 class="section__title">Let's connect.</h2>
-                <p class="section__body section__body--narrow">
-                    Open to collaborations in computational pathology, medical image analysis, and AI for oncology.
-                </p>
-
-                <div class="contact-grid">
-                    <a href="mailto:marwan.abbas@univ-brest.fr" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <span>marwan.abbas@univ-brest.fr</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" class="contact-card">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" class="contact-card">
-                        <i class="ai ai-researchgate"></i>
-                        <span>ResearchGate</span>
-                    </a>
-                    <a href="https://github.com/marwanabb" target="_blank" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                </div>
             </section>
 
             <footer class="footer">
