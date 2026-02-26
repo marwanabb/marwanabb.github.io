@@ -1,73 +1,87 @@
-// Set current year in footer
-document.getElementById('current-year').textContent = new Date().getFullYear();
+/* ======================================================
+   Marwan Abbas — Site JS
+   Scroll-reveal, active nav tracking, mobile menu
+   ====================================================== */
 
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-mobileMenuBtn.addEventListener('click', () => {
-  mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-// Theme toggle
-const themeToggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
-let isDarkMode = true; // Default is dark mode
-
-themeToggleBtn.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  isDarkMode = !isDarkMode;
-  
-  // Update theme toggle icon
-  themeToggleBtn.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-});
-
-// Highlight active section on scroll
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section[id]');
-  let currentSection = '';
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    const sectionHeight = section.offsetHeight;
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      currentSection = section.getAttribute('id');
-    }
-  });
-  
-  // Update navigation links
-  document.querySelectorAll('.nav-links a, .mobile-links a').forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentSection}`) {
-      link.classList.add('active');
-    }
-  });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('.nav-links a, .mobile-links a, a.btn, .logo').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const targetId = href.substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
+// ---- Scroll-triggered section reveal ----
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
-        
-        // Close mobile menu after clicking a link
-        mobileMenu.style.display = 'none';
-      }
-    }
-  });
+    },
+    { threshold: 0.12 }
+);
+sections.forEach((s) => observer.observe(s));
+
+// ---- Active nav link tracking ----
+const navLinks = document.querySelectorAll('.panel__nav-link');
+const contentEl = document.getElementById('content');
+
+function updateActiveNav() {
+    let current = '';
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 200) {
+            current = section.id;
+        }
+    });
+    navLinks.forEach((link) => {
+        link.classList.toggle('active', link.dataset.section === current);
+    });
+}
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
+
+// ---- Smooth scroll for nav links ----
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+        const id = this.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+    });
 });
 
-// Add placeholder for profile image if it fails to load
-document.querySelector('.profile-image img').addEventListener('error', function() {
-  this.src = 'https://via.placeholder.com/400';
+// ---- Mobile menu ----
+const menuToggle = document.getElementById('menu-toggle');
+const panel = document.getElementById('panel');
+
+function closeMobileMenu() {
+    panel.classList.remove('open');
+    menuToggle.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+menuToggle.addEventListener('click', () => {
+    const isOpen = panel.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Close menu when clicking outside panel inner
+panel.addEventListener('click', (e) => {
+    if (e.target === panel) closeMobileMenu();
+});
+
+// ---- Profile image fallback ----
+const profileImgs = document.querySelectorAll('.panel__photo, .mobile-header__avatar');
+profileImgs.forEach((img) => {
+    img.addEventListener('error', function () {
+        this.src =
+            'data:image/svg+xml,' +
+            encodeURIComponent(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect fill="%23162a1e" width="200" height="200"/><text fill="%234caf80" font-family="sans-serif" font-size="64" x="50%" y="54%" text-anchor="middle" dominant-baseline="middle">MA</text></svg>'
+            );
+    });
 });
