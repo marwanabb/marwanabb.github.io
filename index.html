@@ -3,421 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marwan Abbas - PhD Researcher</title>
+    <title>Marwan Abbas — Computational Pathology & AI</title>
+    <meta name="description" content="Research Fellow at Mayo Clinic. Deep learning for medical image analysis, computational pathology, and AI-driven oncology.">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Academicons for academic icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
-<body class="dark-mode">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <span class="logo-letter">M</span>
-                    <span class="logo-text">Marwan Abbas</span>
-                </a>
-                
-                <div class="header-right">
-                    <button id="theme-toggle" class="theme-toggle">
-                        <i class="fas fa-sun"></i>
-                    </button>
-                    
-                    <nav class="main-nav">
-                        <ul class="nav-links">
-                            <li><a href="#hero" class="active">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#research">Research</a></li>
-                            <li><a href="#publications">Publications</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                    
-                    <button id="mobile-menu-btn" class="mobile-menu-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+<body>
+
+    <!-- Ambient background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <div class="layout">
+
+        <!-- ===== LEFT PANEL — Green Glass Identity Column ===== -->
+        <aside class="panel" id="panel">
+            <div class="panel__inner">
+
+                <div class="panel__photo-wrap">
+                    <img src="profile.png" alt="Marwan Abbas" class="panel__photo">
                 </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mobile-menu">
-                <ul class="mobile-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+                <h1 class="panel__name">Marwan<br>Abbas</h1>
+                <p class="panel__role">Research Fellow</p>
+                <p class="panel__affiliation">Mayo Clinic<br><span>Computational Pathology & AI</span></p>
+
+                <div class="panel__divider"></div>
+
+                <ul class="panel__tags">
+                    <li>Deep Learning</li>
+                    <li>Medical Imaging</li>
+                    <li>Computer Vision</li>
+                    <li>Oncology AI</li>
+                    <li>Computational Pathology</li>
                 </ul>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="section hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="profile-col">
-                    <div class="profile-image">
-                        <img src="profile.png" alt="Marwan Abbas">
-                    </div>
-                    <div class="profile-title">PhD Researcher</div>
-                    <h1 class="profile-name">Marwan Abbas</h1>
-                    <p class="profile-subtitle">Medical Image Analysis | AI | Computer Vision</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank"><i class="ai ai-google-scholar"></i></a>
-                        <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank"><i class="ai ai-researchgate"></i></a>
-                        <a href="mailto:marwan.abbas@univ-brest.fr"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <a href="#about" class="btn primary-btn">
-                        Learn more about my experience
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="research-col">
-                    <h2 class="section-title">Research Focus</h2>
-                    <div class="section-divider"></div>
-                    <ul class="research-list">
-                        <li class="research-item">
-                            <div class="research-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <div class="research-content">
-                                <h3>Medical Image Analysis</h3>
-                                <p>Developing algorithms for medical image segmentation, classification, and abnormality detection in oncology imaging.</p>
-                            </div>
-                        </li>
-                        <li class="research-item">
-                            <div class="research-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="research-content">
-                                <h3>Artificial Intelligence in Oncology</h3>
-                                <p>Applying AI techniques to cancer treatment monitoring and response assessment using medical imaging.</p>
-                            </div>
-                        </li>
-                        <li class="research-item">
-                            <div class="research-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="research-content">
-                                <h3>Computer Vision for CT Scans</h3>
-                                <p>Creating systems for automatic detection and segmentation of organs and lesions in CT scan images.</p>
-                            </div>
-                        </li>
-                        <li class="research-item">
-                            <div class="research-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="research-content">
-                                <h3>Deep Learning for Clinical Trials</h3>
-                                <p>Building deep learning models to support clinical trials and improve treatment assessment in oncology.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="panel__divider"></div>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">
-                    I am a PhD researcher at the ACTION research team (Therapeutic ACTion guided by multimodality Imaging in ONcology) specializing in medical image analysis, AI, and computer vision. My work focuses on the therapeutic monitoring of colorectal cancer liver metastases using artificial intelligence techniques.
-                </p>
-            </div>
-            
-            <div class="about-content">
-                <div class="card">
-                    <h3 class="card-title">Education</h3>
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>Doctor of Philosophy (PhD)</h4>
-                                <p class="experience-place">Université de Bretagne Occidentale</p>
-                                <p class="experience-duration">Nov 2022 - Nov 2025</p>
-                                <p class="experience-description">
-                                    Processing and Analysis of Medical Information and Images. Topic: Therapeutic monitoring of colorectal cancer liver metastases using artificial intelligence. PhD Schools attended: Deep learning school for medical imaging 4th edition 2023, Lyon, France.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>Exchange Program</h4>
-                                <p class="experience-place">Norwegian University of Science and Technology (NTNU)</p>
-                                <p class="experience-duration">Aug 2021 - Jan 2022</p>
-                                <p class="experience-description">
-                                    Computer Science. Relevant courses: image processing, computer vision and graphics, machine learning, data science.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>Master of Engineering (MEng)</h4>
-                                <p class="experience-place">Ecole nationale supérieure de l'Electronique et de ses Applications</p>
-                                <p class="experience-duration">Sep 2019 - Sep 2022</p>
-                                <p class="experience-description">
-                                    Electrical, Electronics and Communications Engineering.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>Preparatory Classes</h4>
-                                <p class="experience-place">CPGE Joffre</p>
-                                <p class="experience-duration">2017 - 2019</p>
-                                <p class="experience-description">
-                                    Mathematics and Physics intensive program.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <h3 class="card-title">Experience</h3>
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>PhD Student</h4>
-                                <p class="experience-place">LaTIM, INSERM UMR1101 - Brest, Brittany, France</p>
-                                <p class="experience-duration">Nov 2022 - Present</p>
-                                <p class="experience-description">
-                                    Working in the ACTION research-team (Therapeutic ACTion guided by multimodality Imaging in ONcology) in collaboration with the French Federation of Digestive Oncology (FFCD). Research focused on therapeutic monitoring of liver metastases using artificial intelligence and development of deep learning models for medical image segmentation.
-                                </p>
-                                <div class="supervisors">
-                                    <p class="supervisors-title">Supervisors:</p>
-                                    <ul class="supervisors-list">
-                                        <li>Pierre-Henri Conze - Associate Professor (IMT-Atlantique), PhD</li>
-                                        <li>Bogdan Badic - Professor of Surgery (University Hospital of Brest), M.D, PhD</li>
-                                        <li>Vincent Bourbonne - Radiation Oncologist (University Hospital of Brest), M.D, PhD</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>R&D Intern - AI for Medical Imaging</h4>
-                                <p class="experience-place">Dassault Systèmes - Vélizy-Villacoublay, Île-de-France, France</p>
-                                <p class="experience-duration">Feb 2022 - Jul 2022</p>
-                                <p class="experience-description">
-                                    Applied deep learning to medical imaging in the Corporate Research Department.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="experience-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="experience-content">
-                                <h4>Research Intern - Digital Pathology and AI</h4>
-                                <p class="experience-place">LIRMM (ICAR Research-Team) - Montpellier, Occitanie, France</p>
-                                <p class="experience-duration">May 2021 - Jul 2021</p>
-                                <p class="experience-description">
-                                    Researched applications of AI in digital pathology, focusing on dermatological applications.
-                                </p>
-                                <div class="supervisors">
-                                    <p class="supervisors-title">Supervisors:</p>
-                                    <ul class="supervisors-list">
-                                        <li>Gérard Subsol - CNRS Research Associate, PhD</li>
-                                        <li>Pierre-Emmanuel Stoebner - Professor of Dermatology, M.D, PhD</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                <nav class="panel__nav">
+                    <a href="#about" class="panel__nav-link" data-section="about">About</a>
+                    <a href="#research" class="panel__nav-link" data-section="research">Research</a>
+                    <a href="#publications" class="panel__nav-link" data-section="publications">Publications</a>
+                    <a href="#contact" class="panel__nav-link" data-section="contact">Contact</a>
+                </nav>
 
-    <!-- Research Section -->
-    <section id="research" class="section research-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Research Projects</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">
-                    My current work focuses on developing deep learning models for therapeutic monitoring of liver metastases and analysis of medical images in oncology.
-                </p>
-            </div>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">FFCD-T2004: Therapeutic Monitoring of Liver Metastases</h3>
-                    <p class="project-duration">2022-Present</p>
-                    <p class="project-description">
-                        Automatic liver segmentation in CT scans for patients with metastatic colorectal cancer, detection and segmentation of liver metastases, and treatment response assessment using AI-driven imaging criteria.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">CT Image Analysis</span>
-                        <span class="tag">Segmentation</span>
-                    </div>
-                    <a href="#" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">BEVATROPHY study (FFCD-T2301)</h3>
-                    <p class="project-duration">2023-Present</p>
-                    <p class="project-description">
-                        Development, implementation, and validation of artificial deep learning models for medical image segmentation to automatically delineate the liver, pancreas, and thyroid from CT scans.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Medical Image Segmentation</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Clinical Trials</span>
-                    </div>
-                    <a href="#" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">Deep Learning for Digital Pathology</h3>
-                    <p class="project-duration">2021</p>
-                    <p class="project-description">
-                        Research on AI applications for dermatological pathology, focusing on basal cell carcinoma localization in Mohs surgery frozen sections.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Digital Pathology</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Computer Vision</span>
-                    </div>
-                    <a href="#" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="panel__links">
+                    <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                    <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" aria-label="ResearchGate"><i class="ai ai-researchgate"></i></a>
+                    <a href="https://github.com/marwanabb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:marwan.abbas@univ-brest.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            
-            <div class="clinical-trials">
-                <h3 class="trials-title">Clinical Trials Involvement</h3>
-                <div class="trials-card">
-                    <h4 class="trial-name">PRODIGE 9 & 20</h4>
-                    <p class="trial-description">
-                        My research contributes to these clinical trials through:
-                    </p>
-                    <ul class="trial-contributions">
-                        <li>Development of AI-driven imaging criteria for treatment response assessment in patients receiving systemic therapies</li>
-                        <li>Automatic organ segmentation to evaluate atrophy as a predictive factor of therapeutic response</li>
-                        <li>Creating deep learning approaches for detection and segmentation of liver metastases</li>
-                    </ul>
-                    <div class="trial-collaboration">
-                        <p class="collaboration-title">Collaboration:</p>
-                        <p class="collaboration-org">French Federation of Digestive Oncology (FFCD)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </aside>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section publications-section alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Publications</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">
-                    Selected academic publications and research papers.
-                </p>
+        <!-- Mobile header -->
+        <header class="mobile-header" id="mobile-header">
+            <div class="mobile-header__left">
+                <img src="profile.png" alt="" class="mobile-header__avatar">
+                <span class="mobile-header__name">M. Abbas</span>
             </div>
-            
-            <div class="publications-list">
-                <div class="publication-card">
-                    <h3 class="publication-title">A deep‐learning algorithm to localize basal cell carcinoma foci on Mohs surgery frozen sections</h3>
-                    <p class="publication-authors">Abbas, M., Stoebner, P.E., Subsol, G., et al.</p>
-                    <p class="publication-journal">Digital Pathology, 2021</p>
-                    <a href="#" class="publication-link">
-                        Read Paper <i class="fas fa-external-link-alt"></i>
+            <button class="mobile-header__toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="content" id="content">
+
+            <!-- ABOUT -->
+            <section id="about" class="section">
+                <span class="section__label">01 — About</span>
+                <h2 class="section__title">Building AI systems<br>that advance cancer care.</h2>
+                <div class="section__body">
+                    <p>
+                        Research Fellow in Computational Pathology & AI at <strong>Mayo Clinic</strong>, developing deep learning methods for gigapixel-scale pathology image analysis and multi-modal cancer diagnostics.
+                    </p>
+                    <p>
+                        PhD from <strong>LaTIM, INSERM UMR1101</strong> (Université de Bretagne Occidentale), focused on AI-driven therapeutic monitoring of colorectal cancer liver metastases — from organ and lesion segmentation to treatment response assessment. Collaboration with the French Federation of Digestive Oncology (FFCD).
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2025 —</span>
+                            <h3>Research Fellow — Computational Pathology & AI</h3>
+                            <p>Mayo Clinic, Rochester, MN</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2022 — 2025</span>
+                            <h3>PhD — Medical Image Analysis</h3>
+                            <p>LaTIM, INSERM UMR1101 · Université de Bretagne Occidentale</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2022</span>
+                            <h3>R&D Intern — AI for Medical Imaging</h3>
+                            <p>Dassault Systèmes</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2021</span>
+                            <h3>Research Intern — Digital Pathology & AI</h3>
+                            <p>LIRMM (CNRS), Montpellier</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2019 — 2022</span>
+                            <h3>MEng — Electrical & Electronics Engineering</h3>
+                            <p>ENSEA · Exchange at NTNU, Norway</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESEARCH -->
+            <section id="research" class="section">
+                <span class="section__label">02 — Research</span>
+                <h2 class="section__title">Focus areas</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <div class="card__icon"><i class="fas fa-microscope"></i></div>
+                        <h3 class="card__title">Computational Pathology</h3>
+                        <p class="card__text">AI for gigapixel whole-slide image analysis. Multi-modal integration with clinical, molecular, and imaging data for precision oncology.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon"><i class="fas fa-crosshairs"></i></div>
+                        <h3 class="card__title">Tumor Segmentation</h3>
+                        <p class="card__text">Instance-aware deep learning for detection and segmentation of colorectal cancer liver metastases in CT. Transfer learning across clinical datasets.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon"><i class="fas fa-cut"></i></div>
+                        <h3 class="card__title">Surgical Planning AI</h3>
+                        <p class="card__text">Automated liver resection planning — predicting future liver remnant from anatomical and pathological segmentation masks.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon"><i class="fas fa-shuffle"></i></div>
+                        <h3 class="card__title">Cross-Domain Transfer</h3>
+                        <p class="card__text">Cross-dimensional knowledge transfer and multi-modal fusion for robust model deployment across institutions and imaging protocols.</p>
+                    </div>
+                </div>
+
+                <div class="projects">
+                    <h3 class="projects__heading">Clinical Trials</h3>
+                    <div class="projects__grid">
+                        <div class="project">
+                            <span class="project__badge">FFCD</span>
+                            <h4>PRODIGE 9 & 20</h4>
+                            <p>AI imaging criteria for treatment response. Organ atrophy as predictive factor.</p>
+                        </div>
+                        <div class="project">
+                            <span class="project__badge">T2004</span>
+                            <h4>Liver Metastases Monitoring</h4>
+                            <p>Automatic liver and lesion segmentation for metastatic colorectal cancer patients.</p>
+                        </div>
+                        <div class="project">
+                            <span class="project__badge">T2301</span>
+                            <h4>BEVATROPHY</h4>
+                            <p>Multi-organ segmentation models for body composition in clinical trials.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUBLICATIONS -->
+            <section id="publications" class="section">
+                <span class="section__label">03 — Publications</span>
+                <h2 class="section__title">Selected work</h2>
+
+                <div class="pubs">
+                    <a class="pub" href="https://doi.org/10.1016/j.compbiomed.2025.111076" target="_blank">
+                        <span class="pub__year">2025</span>
+                        <div class="pub__info">
+                            <h3>Exploring learning transferability in deep segmentation of colorectal cancer liver metastases</h3>
+                            <p class="pub__authors">M. Abbas, B. Badic, G. Andrade-Miranda, V. Bourbonne, V. Jaouen, D. Visvikis, P-H. Conze</p>
+                            <p class="pub__venue">Computers in Biology and Medicine</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square pub__arrow"></i>
+                    </a>
+                    <a class="pub" href="https://doi.org/10.1007/s11548-025-03331-2" target="_blank">
+                        <span class="pub__year">2025</span>
+                        <div class="pub__info">
+                            <h3>Automatic future remnant segmentation in liver resection planning</h3>
+                            <p class="pub__authors">H. Messaoudi, M. Abbas, B. Badic, D. Ben Salem, A. Belaid, P-H. Conze</p>
+                            <p class="pub__venue">Int. J. Computer Assisted Radiology and Surgery</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square pub__arrow"></i>
+                    </a>
+                    <a class="pub" href="https://doi.org/10.1016/j.media.2023.102801" target="_blank">
+                        <span class="pub__year">2023</span>
+                        <div class="pub__info">
+                            <h3>Current and emerging trends in medical image segmentation with deep learning</h3>
+                            <p class="pub__authors">P-H. Conze, ..., M. Abbas, et al.</p>
+                            <p class="pub__venue">Medical Image Analysis</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square pub__arrow"></i>
+                    </a>
+                    <a class="pub" href="https://doi.org/10.1016/j.media.2023.102868" target="_blank">
+                        <span class="pub__year">2023</span>
+                        <div class="pub__info">
+                            <h3>Cross-dimensional transfer learning in medical image segmentation with deep learning</h3>
+                            <p class="pub__authors">P-H. Conze, ..., M. Abbas, et al.</p>
+                            <p class="pub__venue">Medical Image Analysis</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square pub__arrow"></i>
+                    </a>
+                    <a class="pub" href="https://doi.org/10.3390/jimaging7040071" target="_blank">
+                        <span class="pub__year">2021</span>
+                        <div class="pub__info">
+                            <h3>Deeply supervised UNet for semantic segmentation to assist dermatopathological assessment of BCC</h3>
+                            <p class="pub__authors">M. Abbas, P-E. Stoebner, G. Subsol, et al.</p>
+                            <p class="pub__venue">Journal of Imaging</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square pub__arrow"></i>
                     </a>
                 </div>
-            </div>
-            
-            <div class="all-publications">
-                <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank" class="all-publications-link">
-                    View all publications on Google Scholar 
-                    <i class="ai ai-google-scholar ai-lg"></i>
+
+                <a href="https://scholar.google.com/citations?user=N9ukfugAAAAJ&hl=fr" target="_blank" class="scholar-link">
+                    <i class="ai ai-google-scholar"></i>
+                    All publications on Google Scholar
+                    <i class="fas fa-arrow-right"></i>
                 </a>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">
-                    Feel free to reach out for collaborations, questions, or just to connect.
+            <!-- CONTACT -->
+            <section id="contact" class="section section--last">
+                <span class="section__label">04 — Contact</span>
+                <h2 class="section__title">Let's connect.</h2>
+                <p class="section__body section__body--narrow">
+                    Open to collaborations in computational pathology, medical image analysis, and AI for oncology.
                 </p>
-            </div>
-            
-            <div class="contact-grid">
-                <a href="mailto:marwan.abbas@univ-brest.fr" class="contact-card">
-                    <div class="contact-icon">
+
+                <div class="contact-grid">
+                    <a href="mailto:marwan.abbas@univ-brest.fr" class="contact-card">
                         <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="contact-title">Email</h3>
-                    <p class="contact-info">marwan.abbas@univ-brest.fr</p>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <h3 class="contact-title">LinkedIn</h3>
-                    <p class="contact-info">Connect with me</p>
-                </a>
-                
-                <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="ai ai-researchgate ai-lg"></i>
-                    </div>
-                    <h3 class="contact-title">ResearchGate</h3>
-                    <p class="contact-info">Follow my research</p>
-                </a>
-            </div>
-        </div>
-    </section>
+                        <span>marwan.abbas@univ-brest.fr</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marwan-abbas-088a23239/" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Marwan-Abbas-7" target="_blank" class="contact-card">
+                        <i class="ai ai-researchgate"></i>
+                        <span>ResearchGate</span>
+                    </a>
+                    <a href="https://github.com/marwanabb" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="copyright">
-                © <span id="current-year"></span> Marwan Abbas. All rights reserved.
-            </p>
-        </div>
-    </footer>
+            <footer class="footer">
+                <p>&copy; <span id="year"></span> Marwan Abbas</p>
+            </footer>
+
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
